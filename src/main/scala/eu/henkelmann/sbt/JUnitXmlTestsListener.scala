@@ -177,7 +177,7 @@ class JUnitXmlTestsListener(val outputDir:String) extends TestsListener
     }
 
     private def writeSuite() = {
-        XML.save (new File(targetDir, testSuite.value.name + ".xml").getAbsolutePath, testSuite.value.stop(), "UTF-8", true, null)
+        XML.save (new File(targetDir, "TEST-" + testSuite.value.name + ".xml").getAbsolutePath, testSuite.value.stop(), "UTF-8", true, null)
     }
     
     /**Does nothing, as we write each file after a suite is done.*/
